@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Aplication</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<script> 
+var altura, baseM,basem, r ;
+
+function resul() {
+baseM=parseInt(document.getElementById("txtBaseMa").value);
+basem=parseInt(document.getElementById("txtBaseMe").value);
+altura=parseInt(document.getElementById("txtAltura").value);
+
+r=(baseM+basem)*altura/2;
+
+document.getElementById("txtresultado").value=r;
+
+
+
+}
+
+
+</script>
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Calcula el Area de un trapecio</h1>
+	</div>
+	<div data-role="content">	
+	<table width="0" border="0">
+  <tr>
+    <td><label for="textinput">Introduzca Base Mayor:</label></td>
+    <td>
+      
+      <input type="text" name="txtBaseMa" id="txtBaseMa" value=""  />
+    </div></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Introduzca Base Menor:</label></td>
+    <td> <input type="text" name="txtBaseMe" id="txtBaseMe" value=""  /></td>
+  </tr>
+  <tr>
+    <td><label for="textinput">Introduzca Altura:</label></td>
+    <td> <input type="text" name="txtAltura" id="txtAltura" value=""  /></td>
+  </tr>
+  <tr>
+    <td><button onClick="resul()">CALCULAR</button></td>
+    <td> <input type="text" name="txtresultado" id="txtresultado" value=""  /></td>
+  </tr>
+</table>
+
+	
+	</div>
+	<div data-role="footer">
+		<h4>Autor-Axel Fernando Valdez Garcia</h4>
+	</div>
+</div>
+
+
+</body>
+</html>
